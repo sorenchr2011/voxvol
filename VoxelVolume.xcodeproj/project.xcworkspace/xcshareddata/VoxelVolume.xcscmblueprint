@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "900532B7E901BCF12B84E1C26A8435CC37B8DBFA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "900532B7E901BCF12B84E1C26A8435CC37B8DBFA" : 0,
+    "79831E36E75847E3057B729CC7219424B593CC81" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D1004C62-735D-4BDC-8FED-9EAF1A335F27",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "900532B7E901BCF12B84E1C26A8435CC37B8DBFA" : "osirixplugins\/",
+    "79831E36E75847E3057B729CC7219424B593CC81" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VoxelVolume",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "_help\/VoxelVolume\/VoxelVolume.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "iv1.ischemaview.com:\/opt\/repos\/surfer4d.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79831E36E75847E3057B729CC7219424B593CC81"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pixmeo\/osirixplugins.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "900532B7E901BCF12B84E1C26A8435CC37B8DBFA"
+    }
+  ]
+}
