@@ -117,8 +117,9 @@
     NSMutableArray *zpos_voxelcount_dict=[NSMutableArray array];
     
     
-    //make a dictionary of slice pos and indx
-    
+    //dictionary of unique name along with incremental index
+    NSMutableDictionary *name_indx_dict=[NSMutableDictionary dictionary];
+    int myindex=0;
     for (int k=0;k<nslices;k++)
     {
         
@@ -137,11 +138,41 @@
             floatptr[ipix]=0;   //we need a clean bg now in the copy of the original
         }
         
+        int fillvalue=-1;
         for (int iroi=0;iroi<roiImageList.count;iroi++) //will rasterize each roi in this slice and put 1's where the ROI was
         {
-            [curImg fillROI:[roiImageList objectAtIndex:iroi] :1: -99999:99999 :NO];
+       //    [[roiImageList objectAtIndex:iroi] ]
+        
+            NSString* nameString=[[roiImageList objectAtIndex:iroi] name];
             
+            //is this name is not already seen
+            //then increment the index and add key with index
+            
+            if ([name_indx_dict objectForKey:nameString]==nil)
+            {
+                myindex++;
+                [name_indx_dict setObject:[NSNumber numberWithInt:myindex] forKey:nameString];
+                fillvalue=myindex;
+            } else  //if it is, get the index
+            {
+                
+                fillvalue=[[name_indx_dict objectForKey:nameString] intValue];
+            }
+            
+            
+            
+            
+            [curImg fillROI:[roiImageList objectAtIndex:iroi] :fillvalue: -99999:99999 :NO];
+              NSLog(@"name is: %@", nameString);
+          
+            
+            // change the above to give a new value to each unseen name store in dict
+         
         }
+        
+        
+        //change below to calculate volumes for each discrete label in stead and store in a dict
+        //THIS CAN WAIT BECAUSE THE ABOVE IS MORE IMMEDITATE
         int slicecount=0;
         for (int ipix=0;ipix<([curImg pwidth]*[curImg pheight]); ipix++)
         {
